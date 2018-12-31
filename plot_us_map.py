@@ -69,8 +69,6 @@ def plot_districts(data, min, max):
     plt.title('Districts by Estimated Monetary Value of One Vote')
     plt.show()
 
-    return district_names
-
 def plot_states(data, min, max):
     assert len(data) == 50 
     # Lambert Conformal map of lower 48 states.
