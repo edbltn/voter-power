@@ -2,6 +2,7 @@ from collections import defaultdict
 import numpy as np
 import pandas as pd
 import os
+import math
 
 class Scorer:
     def __init__(self, data_dir_name):
@@ -18,14 +19,19 @@ class Scorer:
 
         self.official_scores = {}
         for index, row in scores_df.iterrows():
+            # Make sure score is valid
+            score = np.array([float(row['nominate_dim1']), float(row['nominate_dim2'])])
+            if math.isnan(score[0]) or math.isnan(score[1]):
+                continue
 
+            # Get state and party information
             state = row['state_abbrev']
             party = 'I'
             if row['party_code'] == 200:
                 party = 'R'
             elif row['party_code'] == 100:
                 party = 'D'
-            score = np.array([float(row['nominate_dim1']), float(row['nominate_dim2'])])
+
             # Update member score
             if row['congress'] == 115:
                 official_id = row['bioname'].split(',')[0].lower() + '_' + state + '_' + party
@@ -40,7 +46,6 @@ class Scorer:
                 d_total[state] += 1
                 delta = score - self.mean_d_scores[state]
                 self.mean_d_scores[state] += delta / d_total[state]
-
             total[state] += 1
             delta = score - self.mean_scores[state]
             self.mean_scores[state] += delta / total[state]
