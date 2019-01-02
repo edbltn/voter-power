@@ -36,7 +36,7 @@ class Scorer:
             if row['congress'] == 115:
                 official_id = row['bioname'].split(',')[0].lower() + '_' + state + '_' + party
                 self.official_scores[official_id] = score
-
+                self.official_scores[row['icpsr']] = score
             # Update estimate scores
             if row['party_code'] == 200:
                 r_total[state] += 1
@@ -65,3 +65,6 @@ class Scorer:
             return self.mean_d_scores[state]
         else:
             return self.mean_scores[state]
+
+    def get_icpsr_score(self, icpsr):
+        return self.official_scores[icpsr]
