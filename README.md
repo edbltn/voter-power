@@ -28,31 +28,9 @@ country = elections.Country('../data')
 
 First I looked at the polls for each race leading up to Election Day. I only considered polls that were taken during October or November\*. Here I assumed that races with no such polls available were essentially uncontested - an assumption that held true in a vast majority of cases, but that definitely weakens the analysis. Follow up work should seek to use voting history for counties as a predictor for races where polling data was lacking.
 
-My next assumption was that the number of polling respondents favoring a given candidate would follow a Binomial distribution $B(n, p)$ where $n$ is the number of polling samples and $p$ is the probability of any voter casting a vote for the given candidate. I approximated this distribution as a Normal distribution with mean $n\hat{p}$ and variance $n\hat{p}(1-\hat{p})$ where $\hat{p}$ was the observed proportion of polling respondents favoring the given candidate.
+My next assumption was that the number of polling respondents favoring a given candidate would follow a Binomial distribution.  I approximated this distribution as a Normal distribution based on the polling responses.
 
-I used a truncated distribution (`scipy.stats.truncnorm`) to ensure that it would only include values between 0 and $n$. Dividing by $n$, this yielded a distribution for $p$, the probability that any voter would pick the given candidate, based on polling data:
-
-$
-p\sim N_0^{1}\left(\hat{p},\sqrt{\frac{\hat{p}(1-\hat{p})}{n}}\right)
-$
-
-Where $N_0^1$ designates a truncated normal distribution between 0 and 1. We'll use $N_0^1$ as a shorthand for the above expression going forward.
-
-Let $V$ be the number of votes cast for the given candidate. Now, for a given turnout $t$, the probability that exactly $k = \left\lceil\frac{t}{2}\right\rceil$ voters would pick the given candidate (hence - all votes are "decisive," assuming a two-candidate election - another weak assumption that ought to be refined), would be:
-
-$
-P[V = k]_{p\sim N_0^1} = \left({t \atop k}\right)p^k(1-p)^{t-k}
-$
-
-Thus the expected tipping point probability can be computed by integrating over $N_0^1$.
-
-$
-\mathbb{E}[P[V=k]]_{p\sim N_0^1} = \int_{0}^1 \left({t \atop k}\right)p^k(1-p)^{t-k}N_0^1(p)dp
-$
-
-This can be computed using `scipy.stats.rv_continuous.expect`.
-
-Now, the only missing factor is the expected turnout. Here, I cheated a little and used the actual turnout on Election Day; future work should use projected turnout based on early vote counts and voting history.
+Now, using the expected turnout, we can find the probability that a voter would have a decisive vote. Here, I cheated a little and used the actual turnout on Election Day; future work should use projected turnout based on early vote counts and voting history.
 
 \*Polls were obtained from [Real Clear Politics](https://www.realclearpolitics.com/elections/2018/)
 
@@ -136,10 +114,6 @@ senate_power /= sims
 
 Finally, we can combine the probability that a voter would be decisive in their race, and the probability that their candidate of choice would be decisive in their chamber, by multiplying them (assuming they represent independent events).
 
-$
-P[\textrm{"Voter is decisive"} \cap \textrm{"Elected Official is decisive"}] = P[\textrm{"Voter is decisive"}] \cdot P[\textrm{"Elected Official is decisive"}]
-$
-
 We can then multiply this result by the cost of Obamacare (\$133 billion) estimated by the Congressional Budget Office. This will tell us how much each vote was worth in the 2018 election when it came to the issue of healthcare.
 
 
@@ -183,19 +157,6 @@ display(senate_seats_df.nlargest(10, 'decisive_voter_probability'))
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -273,19 +234,6 @@ display(senate_seats_df.nlargest(10, 'decisive_voter_probability'))
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
