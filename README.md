@@ -3,11 +3,11 @@
 ## Author: Eric Bolton
 ## Date: 01/02/2019
 
-Many reasons exist to exercise one's right to vote. Beyond simply fulfilling one's civic duty, voting constitutes a way to make one's voice heard, to feel part of something bigger, and to participate in the great democratic experiment. In addition to that, and purely practically speaking, one might want to vote simply because increased turnout [affects policy outcomes](http://www.nyu.edu/gsas/dept/politics/seminars/hajnal_s06.pdf).
+Many reasons exist to exercise one's right to vote. Beyond simply fulfilling one's civic duty, voting constitutes a way to make one's voice heard, to feel part of something bigger, and to participate in the great democratic experiment. One might want to vote simply because increased turnout [affects policy outcomes](http://www.nyu.edu/gsas/dept/politics/seminars/hajnal_s06.pdf).
 
 Yet, every election cycle in America, tens of millions of eligible voters stay at home. It's easy to see why: in elections where hundreds of thousands vote - sometimes millions - the perception may be that one's voice is likely to be lost in the cacophony of the crowd, providing little motivation to head to the polls. One might argue that one's vote only truly "counts" if their vote is the one to push their candidate of choice over the brink, an event that many see as far too unlikely to warrant a visit to the voting booth.
 
-But this perception may be misguided. Consider this: if each vote has only a one in ten million chance of changing outcome of an election, but that election affects billions of dollars at a national scale, then each vote is effectively "worth" hundreds of dollars. In this light, voting is a rational decision per se, if only as an act of charity. This is the argument made by renowned statistician [Andrew Gelman](https://80000hours.org/2016/11/why-the-hour-you-spend-voting-is-the-most-socially-impactful-of-all/).
+But this perception may be misguided. Consider this: if each vote has only a one in ten million chance of changing the outcome of an election, but that election affects billions of dollars in spending at a national scale, then each vote is effectively "worth" hundreds of dollars. In this light, voting is a rational decision per se, if only as an act of charity. This is the argument made by renowned statistician [Andrew Gelman](https://80000hours.org/2016/11/why-the-hour-you-spend-voting-is-the-most-socially-impactful-of-all/).
 
 So, using this reasoning, how much is one's vote truly worth? This project seeks to answer that in the context of the 2018 Midterm Elections for the House and Senate.
 
@@ -42,7 +42,7 @@ for state in country.states:
         district_probabilities[district.code] = p
 ```
 
-Typically, only one Senate seat is contested per state. But the exits of Al Franken (D-MN) and Thad Cochran (R-MS) from the Senate required special elections in Minnesota and Mississippi. For simplicity's sake, I'm picking the larger of the two probabilities in these cases.
+Typically, only one Senate seat is contested per state. But the exits of Al Franken (D-MN) and Thad Cochran (R-MS) from the Senate required special elections in Minnesota and Mississippi. This meant that these states each had two Senate elections in 2018. For simplicity's sake, I'm picking the larger of the two probabilities in these cases.
 
 (*Note that the seats are examined in alphabetical order of their codes - i.e. 'MS' will be seen before 'MS2'*)
 
@@ -60,7 +60,7 @@ for state in country.states:
 
 # Simulating Chamber Votes
 
-Now that we know the likelihood of one's vote changing the outcome for each individual race, we want to compute the likelihood of each individual race dramatically changing the outcome of key House and Senate votes. To predict the outcome of votes, I used partisanship scores available on [VoteView](https://voteview.com), which tracks the partisanship of each senator and representative based on their voting history. For candidates whose partisanship scores weren't available, I simply used the average score of elected officials from their party in their state.
+Now that we know the likelihood of one's vote changing the outcome for each individual race, we want to compute the likelihood of each individual race changing the outcome of key House and Senate votes. To predict the outcome of votes, I used partisanship scores available on [VoteView](https://voteview.com), which tracks the partisanship of each senator and representative based on their voting history. For candidates whose partisanship scores weren't available, I simply used the average score of elected officials from their party in their state.
 
 I created a `ChamberVote` object that looks at how Senators or Representatives actually voted on a past issue\* in order to predict, using logistic regression, how a new class of elected officials would vote. In this example, I use the Senate vote to repeal Obamacare, which narrowly failed on July 28, 2017.
 
@@ -74,7 +74,7 @@ vote = ChamberVote('../data/votes/obamacare_senate.csv',
                    country.official_scorer)
 ```
 
-Now, all that remains to be done is to simulate different elections and use that to estimate how often the Obamacare vote would come down to just one vote in either chamber. In the past, polling has been known to exhibit a national bias toward one party or the other of up to 2\%, so I am including an election bias for each election cycle.
+Now, all that remains to be done is to simulate different elections and use that to estimate how often the Obamacare vote would come down to just one vote in either chamber. In the past, polling has been known to exhibit a national bias of up to 2\% toward one party or the other, so I am including a bias factor for each election cycle.
 
 
 ```python
@@ -308,8 +308,11 @@ display(senate_seats_df.nlargest(10, 'decisive_voter_probability'))
 </div>
 
 
-Let's see how these results look on a map:
+Thus, voters in many states performed a substantial act of charity simply by making their way to their local polling station. In the closely followed and hotly contested race between Kyrsten Sinema and Martha McSally, each vote was worth almost $8000, based on just one of many Senate votes. The races in Nevada and Indiana were worth thousands of dollars per vote as well.
 
+When these states voted on November 8th, 2018, millions of lives, and billions of dollars hung in the balance. Yet the states only had middling turnout, at 49.10 percent, 47.50 percent, and 46.90 percent each, compared to 50.10 percent nationally.
+
+Finally, let's see how these results look on a map:
 
 ```python
 from plot_us_map import plot_districts, plot_states
@@ -326,8 +329,7 @@ plot_districts(district_values, 0, 10000)
 
 ![png](districts.png)
 
-
-
+It's immediately striking that votes in some states had a negligible value, while votes in others were worth thousands of dollars each. Perhaps, in a better system, each vote would weigh equally. Analyses such as these show where the difference needs to be made, perhaps by working to reduce gerrymandering, or changing voting rules to make individual votes more impactful. One example might be the effort [spearheaded by Maine's 2nd](https://thehill.com/opinion/campaign/418058-maines-2nd-district-outcome-proves-value-of-ranked-choice-voting) in this election cycle to switch to a ranked choice voting system (votes in that tightly contested race, by the way, were worth \$3,000 apiece). But beyond that, in the states and districts where voting mattered most, it is my hope that analyses such as these might cause those who stayed at home to reconsider their decision in future elections.
 ```python
 
 ```
