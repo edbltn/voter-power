@@ -2,7 +2,6 @@
 # voter_power
 ## Author: Eric Bolton
 ## Date: 01/02/2019
-## [Github Repository](https://github.com/edbltn/voter-power)
 
 Many reasons exist to exercise one's right to vote. Beyond simply fulfilling one's civic duty, voting constitutes a way to make one's voice heard, to feel part of something bigger, and to participate in the great democratic experiment. In addition to that, and purely practically speaking, one might want to vote simply because increased turnout [affects policy outcomes](http://www.nyu.edu/gsas/dept/politics/seminars/hajnal_s06.pdf).
 
@@ -16,7 +15,7 @@ So, using this reasoning, how much is one's vote truly worth? This project seeks
 
 In order to come up with an answer, we first need to discover the likelihood that one's vote would have changed the outcome of individual races. Leading up to Election Day, this perceived likelihood depended on two key factors: what the polls were saying about each race (closer races, and more uncertain races have higher odds of being decided by one vote) and what kind of turnout is expected (races with fewer voters have higher odds of being decided by one vote). To this end, I designed a `Country` object that would read and organize the relevant data\* into `State` objects, which in turn were associated with `Race` objects.
 
-\*Available in the [Github repository](https://github.com/edbltn/voter-power)
+\*Available in this repository
 
 
 ```python
