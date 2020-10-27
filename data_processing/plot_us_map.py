@@ -1,3 +1,5 @@
+import copy
+import matplotlib as mpl
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,22 +8,22 @@ from matplotlib.colors import rgb2hex
 from matplotlib.patches import Polygon
 
 def plot_districts(data, min, max):
-    assert len(data) == 435 
+    assert len(data) in (435, 436) # 435 + DC (!)
     # 
     plt.figure(figsize=(20,15))
     m = Basemap(llcrnrlon=-119,llcrnrlat=22,urcrnrlon=-64,urcrnrlat=49,
-            projection='merc',lat_1=33,lat_2=45,lon_0=-95)
+            projection='lcc',lat_1=33,lat_2=45,lon_0=-95)
     # draw state boundaries.
     # data from U.S Census Bureau
     # http://www.census.gov/geo/www/cob/st2000.html
-    shp_info = m.readshapefile('data/shapefiles/us-116th-congressional-districts','states',drawbounds=True)
-    state_codes = pd.read_csv('data/state_info/state_codes.csv')
+    shp_info = m.readshapefile('../shapefiles/us-116th-congressional-districts','states',drawbounds=False)
+    state_codes = pd.read_csv('../data/state_info/state_codes.csv')
 
     # choose a color for each state based on population density.
     colors={}
     district_names=[]
-    cmap = plt.cm.hot
-    cmap.set_under(color='lightgrey')
+    cmap = copy.copy(mpl.cm.get_cmap("Reds_r"))
+    cmap.set_under(color='grey')
     vmin = min; vmax = max # set range
     for shapedict in m.states_info:
         state_number = int(shapedict['STATE'])
@@ -49,6 +51,7 @@ def plot_districts(data, min, max):
     
     # cycle through state names, color each one.
     ax = plt.gca() # get current axes instance
+    ax.set_facecolor('aliceblue')
 
     for nshape,seg in enumerate(m.states):
         # skip DC and Puerto Rico.
@@ -56,21 +59,23 @@ def plot_districts(data, min, max):
         # Offset Alaska and Hawaii to the lower-left corner.
             if district_names[nshape].startswith('AK'):
             # Alaska is too big. Scale it down to 23% first, then translate it.
-                seg = list(map(lambda x: (0.23*x[0] + 1600000, 0.23*x[1]-1100000), seg))
+                seg = list(map(lambda x: (0.4 * x[0] + 750000, 0.4 * x[1] - 1800000), seg))
             if district_names[nshape].startswith('HI'):
-                seg = list(map(lambda x: (x[0] + 3700000, x[1]+1000000), seg))
+                seg = list(map(lambda x: (x[0] + 5200000, x[1] - 1600000), seg))
 
             color = rgb2hex(colors[district_names[nshape]])
-            poly = Polygon(seg,facecolor=color,edgecolor='black')
+            poly = Polygon(seg,facecolor=color,edgecolor='grey')
             ax.add_patch(poly)
 
-    plt.ylim(-300000,4000000)
-    plt.xlim(-1050000,6000000)
+    plt.ylim(-500000,3300000)
+    plt.xlim(-500000,5000000)
+    ax.get_xaxis().set_visible(False)
+    ax.get_yaxis().set_visible(False)
     plt.title('Districts by Estimated Monetary Value of One Vote')
     plt.show()
 
 def plot_states(data, min, max):
-    assert len(data) == 50 
+    assert len(data) in (50, 51)
     # Lambert Conformal map of lower 48 states.
     plt.figure(figsize=(20,15))
     m = Basemap(llcrnrlon=-119,llcrnrlat=22,urcrnrlon=-64,urcrnrlat=49,
@@ -78,13 +83,13 @@ def plot_states(data, min, max):
     # draw state boundaries.
     # data from U.S Census Bureau
     # http://www.census.gov/geo/www/cob/st2000.html
-    shp_info = m.readshapefile('data/shapefiles/st99_d00','states',drawbounds=True)
+    shp_info = m.readshapefile('../shapefiles/st99_d00','states',drawbounds=False)
 
     # choose a color for each state based on population density.
     colors={}
     statenames=[]
-    cmap = plt.cm.hot
-    cmap.set_under(color='lightgrey')
+    cmap = copy.copy(mpl.cm.get_cmap("Reds_r"))
+    cmap.set_under(color='grey')
     vmin = min; vmax = max # set range.
     for shapedict in m.states_info:
         statename = shapedict['NAME']
@@ -98,6 +103,7 @@ def plot_states(data, min, max):
         statenames.append(statename)
     # cycle through state names, color each one.
     ax = plt.gca() # get current axes instance
+    ax.set_facecolor('aliceblue')
 
     for nshape,seg in enumerate(m.states):
         # skip DC and Puerto Rico.
@@ -110,11 +116,13 @@ def plot_states(data, min, max):
                 seg = list(map(lambda x: (x[0] + 5200000, x[1]-1600000), seg))
 
             color = rgb2hex(colors[statenames[nshape]])
-            poly = Polygon(seg,facecolor=color,edgecolor='black')
+            poly = Polygon(seg,facecolor=color,edgecolor='grey')
             ax.add_patch(poly)
 
     plt.ylim(-500000,3300000)
     plt.xlim(-500000,5000000)
+    ax.get_xaxis().set_visible(False)
+    ax.get_yaxis().set_visible(False)
     plt.title('States by Estimated Monetary Value of One Vote')
     plt.show()
 
