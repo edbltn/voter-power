@@ -3,7 +3,7 @@ import requests as req
 from bs4 import BeautifulSoup
 
 
-states = pd.read_csv('data/state_info/state_codes.csv')
+states = pd.read_csv('data/state_info_2018/state_codes.csv')
 
 # Print header
 print('code,party,turnout')
