@@ -4,14 +4,14 @@ from sklearn.linear_model import LogisticRegression
 import numpy as np
 
 class ChamberVote:
-    def __init__(self, path_to_vote_file, official_scorer):
+    def __init__(self, path_to_vote_file, official_scorer, vote_col='V1'):
         self.votes = []
         self.scores = []
         vote_df = pd.read_csv(path_to_vote_file)
         for index, row in vote_df.iterrows():
-            if row['V1'] == 1:
+            if row[vote_col] == 1:
                 self.votes.append(1)
-            else:
+            elif row[vote_col] != 0:
                 self.votes.append(-1)
             
             icpsr = row['icpsr']
