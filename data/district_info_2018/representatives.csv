@@ -1,0 +1,436 @@
+state,district,name,party
+Alabama,1,Bradley Byrne,R
+Alabama,2,Martha Roby,R
+Alabama,3,Mike Rogers,R
+Alabama,4,Robert Aderholt,R
+Alabama,5,Mo Brooks,R
+Alabama,6,Gary Palmer,R
+Alabama,7,Terri Sewell,D
+Alaska,AL,Don Young,R
+Arizona,1,Tom O'Halleran,D
+Arizona,2,Ann Kirkpatrick,D
+Arizona,3,Raúl Grijalva,D
+Arizona,4,Paul Gosar,R
+Arizona,5,Andy Biggs,R
+Arizona,6,David Schweikert,R
+Arizona,7,Ruben Gallego,D
+Arizona,8,Debbie Lesko,R
+Arizona,9,Greg Stanton,D
+Arkansas,1,Rick Crawford,R
+Arkansas,2,French Hill,R
+Arkansas,3,Steve Womack,R
+Arkansas,4,Bruce Westerman,R
+California,1,Doug LaMalfa,R
+California,2,Jared Huffman,D
+California,3,John Garamendi,D
+California,4,Tom McClintock,R
+California,5,Mike Thompson,D
+California,6,Doris Matsui,D
+California,7,Ami Bera,D
+California,8,Paul Cook,R
+California,9,Jerry McNerney,D
+California,10,Josh Harder,D
+California,11,Mark DeSaulnier,D
+California,12,Nancy Pelosi,D
+California,13,Barbara Lee,D
+California,14,Jackie Speier,D
+California,15,Eric Swalwell,D
+California,16,Jim Costa,D
+California,17,Ro Khanna,D
+California,18,Anna Eshoo,D
+California,19,Zoe Lofgren,D
+California,20,Jimmy Panetta,D
+California,21,TJ Cox,D
+California,22,Devin Nunes,R
+California,23,Kevin McCarthy,R
+California,24,Salud Carbajal,D
+California,25,Katie Hill,D
+California,26,Julia Brownley,D
+California,27,Judy Chu,D
+California,28,Adam Schiff,D
+California,29,Tony Cárdenas,D
+California,30,Brad Sherman,D
+California,31,Pete Aguilar,D
+California,32,Grace Napolitano,D
+California,33,Ted Lieu,D
+California,34,Jimmy Gomez,D
+California,35,Norma Torres,D
+California,36,Raul Ruiz,D
+California,37,Karen Bass,D
+California,38,Linda Sánchez,D
+California,39,Gil Cisneros,D
+California,40,Lucille Roybal-Allard,D
+California,41,Mark Takano,D
+California,42,Ken Calvert,R
+California,43,Maxine Waters,D
+California,44,Nanette Barragán,D
+California,45,Katie Porter,D
+California,46,Lou Correa,D
+California,47,Alan Lowenthal,D
+California,48,Harley Rouda,D
+California,49,Mike Levin,D
+California,50,Duncan D. Hunter,R
+California,51,Juan Vargas,D
+California,52,Scott Peters,D
+California,53,Susan Davis,D
+Colorado,1,Diana DeGette,D
+Colorado,2,Joe Neguse,D
+Colorado,3,Scott Tipton,R
+Colorado,4,Ken Buck,R
+Colorado,5,Doug Lamborn,R
+Colorado,6,Jason Crow,D
+Colorado,7,Ed Perlmutter,D
+Connecticut,1,John B. Larson,D
+Connecticut,2,Joe Courtney,D
+Connecticut,3,Rosa DeLauro,D
+Connecticut,4,Jim Himes,D
+Connecticut,5,Jahana Hayes,D
+Delaware,AL,Lisa Blunt Rochester,D
+Florida,1,Matt Gaetz,R
+Florida,2,Neal Dunn,R
+Florida,3,Ted Yoho,R
+Florida,4,John Rutherford,R
+Florida,5,Al Lawson,D
+Florida,6,Michael Waltz,R
+Florida,7,Stephanie Murphy,D
+Florida,8,Bill Posey,R
+Florida,9,Darren Soto,D
+Florida,10,Val Demings,D
+Florida,11,Daniel Webster,R
+Florida,12,Gus Bilirakis,R
+Florida,13,Charlie Crist,D
+Florida,14,Kathy Castor,D
+Florida,15,Ross Spano,R
+Florida,16,Vern Buchanan,R
+Florida,17,Greg Steube,R
+Florida,18,Brian Mast,R
+Florida,19,Francis Rooney,R
+Florida,20,Alcee Hastings,D
+Florida,21,Lois Frankel,D
+Florida,22,Ted Deutch,D
+Florida,23,Debbie Wasserman Schultz,D
+Florida,24,Frederica Wilson,D
+Florida,25,Mario Diaz-Balart,R
+Florida,26,Debbie Mucarsel-Powell,D
+Florida,27,Donna Shalala,D
+Georgia,1,Buddy Carter,R
+Georgia,2,Sanford Bishop,D
+Georgia,3,Drew Ferguson,R
+Georgia,4,Hank Johnson,D
+Georgia,5,John Lewis,D
+Georgia,6,Lucy McBath,D
+Georgia,7,Rob Woodall,R
+Georgia,8,Austin Scott,R
+Georgia,9,Doug Collins,R
+Georgia,10,Jody Hice,R
+Georgia,11,Barry Loudermilk,R
+Georgia,12,Rick W. Allen,R
+Georgia,13,David Scott,D
+Georgia,14,Tom Graves,R
+Hawaii,1,Ed Case,D
+Hawaii,2,Tulsi Gabbard,D
+Idaho,1,Russ Fulcher,R
+Idaho,2,Mike Simpson,R
+Illinois,1,Bobby Rush,D
+Illinois,2,Robin Kelly,D
+Illinois,3,Dan Lipinski,D
+Illinois,4,Jesús García,D
+Illinois,5,Mike Quigley,D
+Illinois,6,Sean Casten,D
+Illinois,7,Danny K. Davis,D
+Illinois,8,Raja Krishnamoorthi,D
+Illinois,9,Jan Schakowsky,D
+Illinois,10,Brad Schneider,D
+Illinois,11,Bill Foster,D
+Illinois,12,Mike Bost,R
+Illinois,13,Rodney Davis,R
+Illinois,14,Lauren Underwood,D
+Illinois,15,John Shimkus,R
+Illinois,16,Adam Kinzinger,R
+Illinois,17,Cheri Bustos,D
+Illinois,18,Darin LaHood,R
+Indiana,1,Pete Visclosky,D
+Indiana,2,Jackie Walorski,R
+Indiana,3,Jim Banks,R
+Indiana,4,Jim Baird,R
+Indiana,5,Susan Brooks,R
+Indiana,6,Greg Pence,R
+Indiana,7,André Carson,D
+Indiana,8,Larry Bucshon,R
+Indiana,9,Trey Hollingsworth,R
+Iowa,1,Abby Finkenauer,D
+Iowa,2,Dave Loebsack,D
+Iowa,3,Cindy Axne,D
+Iowa,4,Steve King,R
+Kansas,1,Roger Marshall,R
+Kansas,2,Steve Watkins,R
+Kansas,3,Sharice Davids,D
+Kansas,4,Ron Estes,R
+Kentucky,1,James Comer,R
+Kentucky,2,Brett Guthrie,R
+Kentucky,3,John Yarmuth,D
+Kentucky,4,Thomas Massie,R
+Kentucky,5,Hal Rogers,R
+Kentucky,6,Andy Barr,R
+Louisiana,1,Steve Scalise,R
+Louisiana,2,Cedric Richmond,D
+Louisiana,3,Clay Higgins,R
+Louisiana,4,Mike Johnson,R
+Louisiana,5,Ralph Abraham,R
+Louisiana,6,Garret Graves,R
+Maine,1,Chellie Pingree,D
+Maine,2,Jared Golden,D
+Maryland,1,Andy Harris,R
+Maryland,2,Dutch Ruppersberger,D
+Maryland,3,John Sarbanes,D
+Maryland,4,Anthony G. Brown,D
+Maryland,5,Steny Hoyer,D
+Maryland,6,David Trone,D
+Maryland,7,Elijah Cummings,D
+Maryland,8,Jamie Raskin,D
+Massachusetts,1,Richard Neal,D
+Massachusetts,2,Jim McGovern,D
+Massachusetts,3,Lori Trahan,D
+Massachusetts,4,Joseph P. Kennedy III,D
+Massachusetts,5,Katherine Clark,D
+Massachusetts,6,Seth Moulton,D
+Massachusetts,7,Ayanna Pressley,D
+Massachusetts,8,Stephen F. Lynch,D
+Massachusetts,9,Bill Keating,D
+Michigan,1,Jack Bergman,R
+Michigan,2,Bill Huizenga,R
+Michigan,3,Justin Amash,R
+Michigan,4,John Moolenaar,R
+Michigan,5,Dan Kildee,D
+Michigan,6,Fred Upton,R
+Michigan,7,Tim Walberg,R
+Michigan,8,Elissa Slotkin,D
+Michigan,9,Andy Levin,D
+Michigan,10,Paul Mitchell,R
+Michigan,11,Haley Stevens,D
+Michigan,12,Debbie Dingell,D
+Michigan,13,Rashida Tlaib,D
+Michigan,14,Brenda Lawrence,D
+Minnesota,1,Jim Hagedorn,R
+Minnesota,2,Angie Craig,D
+Minnesota,3,Dean Phillips,D
+Minnesota,4,Betty McCollum,D
+Minnesota,5,Ilhan Omar,D
+Minnesota,6,Tom Emmer,R
+Minnesota,7,Collin Peterson,D
+Minnesota,8,Pete Stauber,R
+Mississippi,1,Trent Kelly,R
+Mississippi,2,Bennie Thompson,D
+Mississippi,3,Michael Guest,R
+Mississippi,4,Steven Palazzo,R
+Missouri,1,Lacy Clay,D
+Missouri,2,Ann Wagner,R
+Missouri,3,Blaine Luetkemeyer,R
+Missouri,4,Vicky Hartzler,R
+Missouri,5,Emanuel Cleaver,D
+Missouri,6,Sam Graves,R
+Missouri,7,Billy Long,R
+Missouri,8,Jason Smith,R
+Montana,AL,Greg Gianforte,R
+Nebraska,1,Jeff Fortenberry,R
+Nebraska,2,Don Bacon,R
+Nebraska,3,Adrian Smith,R
+Nevada,1,Dina Titus,D
+Nevada,2,Mark Amodei,R
+Nevada,3,Susie Lee,D
+Nevada,4,Steven Horsford,D
+New Hampshire,1,Chris Pappas,D
+New Hampshire,2,Ann McLane Kuster,D
+New Jersey,1,Donald Norcross,D
+New Jersey,2,Jeff Van Drew,D
+New Jersey,3,Andy Kim,D
+New Jersey,4,Christopher Smith,R
+New Jersey,5,Josh Gottheimer,D
+New Jersey,6,Frank Pallone,D
+New Jersey,7,Tom Malinowski,D
+New Jersey,8,Albio Sires,D
+New Jersey,9,Bill Pascrell,D
+New Jersey,10,Donald Payne Jr.,D
+New Jersey,11,Mikie Sherrill,D
+New Jersey,12,Bonnie Watson Coleman,D
+New Mexico,1,Deb Haaland,D
+New Mexico,2,Xochitl Torres Small,D
+New Mexico,3,Ben Ray Luján,D
+New York,1,Lee Zeldin,R
+New York,2,Peter T. King,R
+New York,3,Thomas Suozzi,D
+New York,4,Kathleen Rice,D
+New York,5,Gregory Meeks,D
+New York,6,Grace Meng,D
+New York,7,Nydia Velázquez,D
+New York,8,Hakeem Jeffries,D
+New York,9,Yvette Clarke,D
+New York,10,Jerrold Nadler,D
+New York,11,Max Rose,D
+New York,12,Carolyn Maloney,D
+New York,13,Adriano Espaillat,D
+New York,14,Alexandria Ocasio-Cortez,D
+New York,15,José E. Serrano,D
+New York,16,Eliot Engel,D
+New York,17,Nita Lowey,D
+New York,18,Sean Patrick Maloney,D
+New York,19,Antonio Delgado,D
+New York,20,Paul Tonko,D
+New York,21,Elise Stefanik,R
+New York,22,Anthony Brindisi,D
+New York,23,Tom Reed,R
+New York,24,John Katko,R
+New York,25,Joseph D. Morelle,D
+New York,26,Brian Higgins,D
+New York,27,Chris Collins,R
+North Carolina,1,G. K. Butterfield,D
+North Carolina,2,George Holding,R
+North Carolina,3,Walter B. Jones Jr.,R
+North Carolina,4,David Price,D
+North Carolina,5,Virginia Foxx,R
+North Carolina,6,Mark Walker,R
+North Carolina,7,David Rouzer,R
+North Carolina,8,Richard Hudson,R
+North Carolina,9,Mark Harris,R
+North Carolina,10,Patrick McHenry,R
+North Carolina,11,Mark Meadows,R
+North Carolina,12,Alma Adams,D
+North Carolina,13,Ted Budd,R
+North Dakota,AL,Kelly Armstrong,R
+Ohio,1,Steve Chabot,R
+Ohio,2,Brad Wenstrup,R
+Ohio,3,Joyce Beatty,D
+Ohio,4,Jim Jordan,R
+Ohio,5,Bob Latta,R
+Ohio,6,Bill Johnson,R
+Ohio,7,Bob Gibbs,R
+Ohio,8,Warren Davidson,R
+Ohio,9,Marcy Kaptur,D
+Ohio,10,Mike Turner,R
+Ohio,11,Marcia Fudge,D
+Ohio,12,Troy Balderson,R
+Ohio,13,Tim Ryan,D
+Ohio,14,David Joyce,R
+Ohio,15,Steve Stivers,R
+Ohio,16,Anthony Gonzalez,R
+Oklahoma,1,Kevin Hern,R
+Oklahoma,2,Markwayne Mullin,R
+Oklahoma,3,Frank Lucas,R
+Oklahoma,4,Tom Cole,R
+Oklahoma,5,Kendra Horn,D
+Oregon,1,Suzanne Bonamici,D
+Oregon,2,Greg Walden,R
+Oregon,3,Earl Blumenauer,D
+Oregon,4,Peter DeFazio,D
+Oregon,5,Kurt Schrader,D
+Pennsylvania,1,Brian Fitzpatrick,R
+Pennsylvania,2,Brendan Boyle,D
+Pennsylvania,3,Dwight Evans,D
+Pennsylvania,4,Madeleine Dean,D
+Pennsylvania,5,Mary Gay Scanlon,D
+Pennsylvania,6,Chrissy Houlahan,D
+Pennsylvania,7,Susan Wild,D
+Pennsylvania,8,Matt Cartwright,D
+Pennsylvania,9,Dan Meuser,R
+Pennsylvania,10,Scott Perry,R
+Pennsylvania,11,Lloyd Smucker,R
+Pennsylvania,12,Tom Marino,R
+Pennsylvania,13,John Joyce,R
+Pennsylvania,14,Guy Reschenthaler,R
+Pennsylvania,15,Glenn Thompson,R
+Pennsylvania,16,Mike Kelly,R
+Pennsylvania,17,Conor Lamb,D
+Pennsylvania,18,Michael F. Doyle,D
+Rhode Island,1,David Cicilline,D
+Rhode Island,2,James Langevin,D
+South Carolina,1,Joe Cunningham,D
+South Carolina,2,Joe Wilson,R
+South Carolina,3,Jeff Duncan,R
+South Carolina,4,William Timmons,R
+South Carolina,5,Ralph Norman,R
+South Carolina,6,Jim Clyburn,D
+South Carolina,7,Tom Rice,R
+South Dakota,AL,Dusty Johnson,R
+Tennessee,1,Phil Roe,R
+Tennessee,2,Tim Burchett,R
+Tennessee,3,Chuck Fleischmann,R
+Tennessee,4,Scott DesJarlais,R
+Tennessee,5,Jim Cooper,D
+Tennessee,6,John Rose,R
+Tennessee,7,Mark E. Green,R
+Tennessee,8,David Kustoff,R
+Tennessee,9,Steve Cohen,D
+Texas,1,Louie Gohmert,R
+Texas,2,Dan Crenshaw,R
+Texas,3,Van Taylor,R
+Texas,4,John Ratcliffe,R
+Texas,5,Lance Gooden,R
+Texas,6,Ron Wright,R
+Texas,7,Lizzie Fletcher,D
+Texas,8,Kevin Brady,R
+Texas,9,Al Green,D
+Texas,10,Michael McCaul,R
+Texas,11,Mike Conaway,R
+Texas,12,Kay Granger,R
+Texas,13,Mac Thornberry,R
+Texas,14,Randy Weber,R
+Texas,15,Vicente González,D
+Texas,16,Veronica Escobar,D
+Texas,17,Bill Flores,R
+Texas,18,Sheila Jackson Lee,D
+Texas,19,Jodey Arrington,R
+Texas,20,Joaquín Castro,D
+Texas,21,Chip Roy,R
+Texas,22,Pete Olson,R
+Texas,23,Will Hurd,R
+Texas,24,Kenny Marchant,R
+Texas,25,Roger Williams,R
+Texas,26,Michael Burgess,R
+Texas,27,Michael Cloud,R
+Texas,28,Henry Cuellar,D
+Texas,29,Sylvia Garcia,D
+Texas,30,Eddie Bernice Johnson,D
+Texas,31,John Carter,R
+Texas,32,Colin Allred,D
+Texas,33,Marc Veasey,D
+Texas,34,Filemon Vela Jr.,D
+Texas,35,Lloyd Doggett,D
+Texas,36,Brian Babin,R
+Utah,1,Rob Bishop,R
+Utah,2,Chris Stewart,R
+Utah,3,John Curtis,R
+Utah,4,Ben McAdams,D
+Vermont,AL,Peter Welch,D
+Virginia,1,Rob Wittman,R
+Virginia,2,Elaine Luria,D
+Virginia,3,Bobby Scott,D
+Virginia,4,Donald McEachin,D
+Virginia,5,Denver Riggleman,R
+Virginia,6,Ben Cline,R
+Virginia,7,Abigail Spanberger,D
+Virginia,8,Don Beyer,D
+Virginia,9,Morgan Griffith,R
+Virginia,10,Jennifer Wexton,D
+Virginia,11,Gerry Connolly,D
+Washington,1,Suzan DelBene,D
+Washington,2,Rick Larsen,D
+Washington,3,Jaime Herrera Beutler,R
+Washington,4,Dan Newhouse,R
+Washington,5,Cathy McMorris Rodgers,R
+Washington,6,Derek Kilmer,D
+Washington,7,Pramila Jayapal,D
+Washington,8,Kim Schrier,D
+Washington,9,Adam Smith,D
+Washington,10,Dennis Heck,D
+West Virginia,1,David McKinley,R
+West Virginia,2,Alex Mooney,R
+West Virginia,3,Carol Miller,R
+Wisconsin,1,Bryan Steil,R
+Wisconsin,2,Mark Pocan,D
+Wisconsin,3,Ron Kind,D
+Wisconsin,4,Gwen Moore,D
+Wisconsin,5,Jim Sensenbrenner,R
+Wisconsin,6,Glenn Grothman,R
+Wisconsin,7,Sean Duffy,R
+Wisconsin,8,Mike Gallagher,R
+Wyoming,AL,Liz Cheney,R
