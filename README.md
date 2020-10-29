@@ -1,3 +1,10 @@
+# Last Minute Moneyball: Maximize Your Impact Before Election Day
+## Author: Eric Bolton
+## Date: 10/28/2020
+    
+If you are coming here from the [Medium piece](https://medium.com/@eric.didier.bolton/last-minute-moneyball-maximize-your-impact-before-election-day-91e4da132174), you can find the notebook analysis [here](https://github.com/edbltn/voter-power/blob/master/data_processing/voter_power_analysis.ipynb).
+
+The code for this analysis was originally developed as part of a Computational Journalism course at the Columbia Journalism School. You can find the write-up for that below.
 
 # voter_power
 ## Author: Eric Bolton
