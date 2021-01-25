@@ -1,4 +1,5 @@
 import numpy as np
+import os
 import pandas as pd
 import re
 
@@ -8,6 +9,7 @@ from scipy.stats import truncnorm, binom
 from scorer import Scorer
 from definitions import *
 
+#
 class Country:
     def __init__(self, data_dir_name):
         self.data_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),data_dir_name)
