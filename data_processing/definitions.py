@@ -1,7 +1,3 @@
-import os
-
-ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-
 INFO_DIRS = {
     'ec': 'ec_info',
     'house': 'district_info',

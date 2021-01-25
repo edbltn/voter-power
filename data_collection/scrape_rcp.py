@@ -1,10 +1,12 @@
+import os
 import requests as req
 import subprocess
 import sys
 
 from bs4 import BeautifulSoup
+ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(ROOT_DIR)
 
-from data_processing.definitions import *
 
 try:
     url = sys.argv[1]

@@ -1,13 +1,43 @@
-# Last Minute Moneyball: Maximize Your Impact Before Election Day
+# voter power
 ## Author: Eric Bolton
-## Date: 10/28/2020
     
-If you are coming here from the [Medium piece](https://medium.com/@eric.didier.bolton/last-minute-moneyball-maximize-your-impact-before-election-day-91e4da132174), you can find the notebook analysis [here](https://github.com/edbltn/voter-power/blob/master/data_processing/voter_power_analysis.ipynb).
+Welcome! If you are coming here from my [Medium piece](https://medium.com/@eric.didier.bolton/last-minute-moneyball-maximize-your-impact-before-election-day-91e4da132174), the code for this analysis was originally developed as part of a Computational Journalism course at the Columbia Journalism School. You can find the write-up for that below.
 
-The code for this analysis was originally developed as part of a Computational Journalism course at the Columbia Journalism School. You can find the write-up for that below.
+###  Running the existing analysis
+You can find the notebook [here](https://github.com/edbltn/voter-power/blob/master/data_processing/voter_power_analysis.ipynb). To open and run the notebook:
+```
+python3 -m venv env
+source env/bin/activate
+pip -r install requirements.txt
+jupyter notebook data_processing/voter_power_analysis.ipynb
+```
 
-# voter_power
-## Author: Eric Bolton
+### Repeating with new data
+Clear the 2020 data with:
+```
+rm data/ec_info/*
+rm data/state_info/*
+rm data/district_info/*
+```
+
+Scrape new data using:
+```
+python data_collection/scrape_rcp.py \
+    https://www.realclearpolitics.com/epolls/2020/president/2020_elections_electoral_college_map.html \
+    data/ec_info
+python data_collection/scrape_rcp.py \
+    https://www.realclearpolitics.com/epolls/2020/senate/2020_elections_senate_map.html \
+    data/state_info
+python data_collection/scrape_rcp.py \
+    https://www.realclearpolitics.com/epolls/2020/house/2020_elections_house_map.html \
+    data/district_info
+```
+(In the case of this snippet, links for 2020 data were used.)
+
+Then simply run the notebook again.
+
+
+# Original write-up
 ## Date: 01/02/2019
 
 Many reasons exist to exercise one's right to vote. Beyond simply fulfilling one's civic duty, voting constitutes a way to make one's voice heard, to feel part of something bigger, and to participate in the great democratic experiment. One might want to vote simply because increased turnout [affects policy outcomes](http://www.nyu.edu/gsas/dept/politics/seminars/hajnal_s06.pdf).
